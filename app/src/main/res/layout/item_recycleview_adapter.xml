@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+       android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:id="@+id/fruitImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:textSize="28sp"
+            android:layout_alignTop="@+id/fruitImage"
+            android:layout_toEndOf="@+id/fruitImage" />
+
+        <TextView
+            android:textSize="30sp"
+            android:id="@+id/txViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fruitImage"
+            android:layout_alignStart="@+id/txViewName" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

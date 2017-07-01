@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.muxi.lfernandosantos.desafiomuxi.FruitDetailsActivity"
+    tools:showIn="@layout/activity_fruit_details">
+
+<RelativeLayout
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_margin="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNameDetails" />
+
+    <TextView
+        android:layout_margin="4dp"
+        android:id="@+id/textPriceDolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:layout_below="@+id/textNameDetails"/>
+
+    <TextView
+        android:layout_margin="4dp"
+        android:layout_below="@+id/textNameDetails"
+        android:layout_toRightOf="@+id/textPriceDolar"
+        android:id="@+id/textPriceReal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$" />
+
+
+</RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
