@@ -1,4 +1,4 @@
-package com.muxi.lfernandosantos.desafiomuxi;
+package com.muxi.lfernandosantos.desafiomuxi.network;
 
 import com.muxi.lfernandosantos.desafiomuxi.models.DataFruit;
 import com.muxi.lfernandosantos.desafiomuxi.models.Fruit;

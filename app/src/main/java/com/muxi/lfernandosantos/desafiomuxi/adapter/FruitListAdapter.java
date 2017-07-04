@@ -1,6 +1,7 @@
-package com.muxi.lfernandosantos.desafiomuxi;
+package com.muxi.lfernandosantos.desafiomuxi.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.muxi.lfernandosantos.desafiomuxi.Converter;
+import com.muxi.lfernandosantos.desafiomuxi.R;
+import com.muxi.lfernandosantos.desafiomuxi.RecyclerViewClickListener;
 import com.muxi.lfernandosantos.desafiomuxi.models.Fruit;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import java.util.List;
 
@@ -19,14 +26,16 @@ import java.util.List;
 
 public class FruitListAdapter extends RecyclerView.Adapter<FruitListAdapter.MyViewHolder> {
 
-    public List<Fruit> fruits;
-    public LayoutInflater inflater;
-    public Context context;
-    public RecyclerViewClickListener mRecyclerViewClickListener;
+    private List<Fruit> fruits;
+    private LayoutInflater inflater;
+    private Context context;
+    private RecyclerViewClickListener mRecyclerViewClickListener;
+    private ImageLoader imageLoader;
 
-    public FruitListAdapter(List<Fruit> fruits, Context context){
+    public FruitListAdapter(List<Fruit> fruits, Context context, ImageLoader imageLoader){
         this.fruits = fruits;
         this.context = context;
+        this.imageLoader = imageLoader;
 
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -43,7 +52,9 @@ public class FruitListAdapter extends RecyclerView.Adapter<FruitListAdapter.MyVi
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        Glide.with(context).load(fruits.get(position).image).into(holder.image);
+        imageLoader.displayImage(fruits.get(position).image, holder.image, null, null);
+
+        //Glide.with(context).load(fruits.get(position).image).into(holder.image);
         holder.name.setText(fruits.get(position).name.toUpperCase());
 
         Converter converter = new Converter();

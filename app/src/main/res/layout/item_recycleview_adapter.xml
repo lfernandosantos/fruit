@@ -15,13 +15,14 @@
             android:id="@+id/fruitImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/blankspinner" />
 
         <TextView
             android:id="@+id/txViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
+            android:textStyle="bold"
             android:textSize="28sp"
             android:layout_alignTop="@+id/fruitImage"
             android:layout_toEndOf="@+id/fruitImage" />
