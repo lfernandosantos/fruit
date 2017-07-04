@@ -1,4 +1,4 @@
-package com.muxi.lfernandosantos.desafiomuxi;
+package com.muxi.lfernandosantos.desafiomuxi.views;
 
 import android.view.View;
 

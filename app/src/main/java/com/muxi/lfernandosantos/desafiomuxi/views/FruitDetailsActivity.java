@@ -1,18 +1,16 @@
-package com.muxi.lfernandosantos.desafiomuxi;
+package com.muxi.lfernandosantos.desafiomuxi.views;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.muxi.lfernandosantos.desafiomuxi.Converter;
+import com.muxi.lfernandosantos.desafiomuxi.R;
 import com.muxi.lfernandosantos.desafiomuxi.models.Fruit;
 
 public class FruitDetailsActivity extends AppCompatActivity {

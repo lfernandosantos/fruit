@@ -1,7 +1,6 @@
 package com.muxi.lfernandosantos.desafiomuxi.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,14 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.muxi.lfernandosantos.desafiomuxi.Converter;
 import com.muxi.lfernandosantos.desafiomuxi.R;
-import com.muxi.lfernandosantos.desafiomuxi.RecyclerViewClickListener;
+import com.muxi.lfernandosantos.desafiomuxi.views.RecyclerViewClickListener;
 import com.muxi.lfernandosantos.desafiomuxi.models.Fruit;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import java.util.List;
 
@@ -62,7 +58,6 @@ public class FruitListAdapter extends RecyclerView.Adapter<FruitListAdapter.MyVi
         holder.price.setText("$"+ priceUS);
 
     }
-
 
 
     @Override

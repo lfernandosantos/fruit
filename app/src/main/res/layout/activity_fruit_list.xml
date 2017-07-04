@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.muxi.lfernandosantos.desafiomuxi.FruitListActivity">
+    tools:context="com.muxi.lfernandosantos.desafiomuxi.views.FruitListActivity">
 
 
     <android.support.v7.widget.RecyclerView

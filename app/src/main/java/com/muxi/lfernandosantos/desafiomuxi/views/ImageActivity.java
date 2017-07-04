@@ -1,4 +1,4 @@
-package com.muxi.lfernandosantos.desafiomuxi;
+package com.muxi.lfernandosantos.desafiomuxi.views;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.muxi.lfernandosantos.desafiomuxi.R;
 import com.muxi.lfernandosantos.desafiomuxi.models.Fruit;
 
 public class ImageActivity extends AppCompatActivity {

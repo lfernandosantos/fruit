@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.muxi.lfernandosantos.desafiomuxi.FruitDetailsActivity"
+    tools:context="com.muxi.lfernandosantos.desafiomuxi.views.FruitDetailsActivity"
     tools:showIn="@layout/activity_fruit_details">
 
 <RelativeLayout
