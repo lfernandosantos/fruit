@@ -1,7 +1,10 @@
 package com.muxi.lfernandosantos.desafiomuxi.views;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,7 +33,6 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
     private List<Fruit> fruits;
     private PresenterView presenterView;
     private Presenter presenter;
-    private ProgressDialog progressDialog;
 
 
     @Override
@@ -41,10 +43,8 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
         findViews();
 
         recyclerViewFruits.setLayoutManager(getLayoutManager());
-        progressDialog = new ProgressDialog(this);
         presenterView = new PresenterView(this);
         presenter = new Presenter(this);
-
 
     }
 
@@ -52,7 +52,12 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
     protected void onResume() {
         super.onResume();
 
-        loadFruits();
+        if (presenter.getStatusConexion()) {
+            loadFruits();
+        }
+        else {
+            presenterView.showSnack("Verifique sua conexão...", recyclerViewFruits);
+        }
     }
 
     private void loadFruits() {
@@ -73,7 +78,6 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
                 presenterView.dismissProgressDialog();
                 DataFruit dataFruit = response.body();
                 loadRecyclerView(dataFruit);
-
             }
 
             @Override
@@ -81,7 +85,6 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
 
                 presenterView.dismissProgressDialog();
                 presenterView.showSnack("Verifique sua conexão.", recyclerViewFruits);
-
             }
         });
 
@@ -108,6 +111,5 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
     public void onClick(View view, int position){
         presenter.goDetails(fruits.get(position));
     }
-
 
 }

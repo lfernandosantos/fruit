@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:elevation="6dp"
     tools:context="com.muxi.lfernandosantos.desafiomuxi.views.FruitListActivity">
 
 
     <android.support.v7.widget.RecyclerView
+        android:elevation="6dp"
         android:id="@+id/recyclerViewFruit"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

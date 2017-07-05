@@ -50,7 +50,6 @@ public class FruitListAdapter extends RecyclerView.Adapter<FruitListAdapter.MyVi
 
         imageLoader.displayImage(fruits.get(position).image, holder.image, null, null);
 
-        //Glide.with(context).load(fruits.get(position).image).into(holder.image);
         holder.name.setText(fruits.get(position).name.toUpperCase());
 
         Converter converter = new Converter();
@@ -64,8 +63,6 @@ public class FruitListAdapter extends RecyclerView.Adapter<FruitListAdapter.MyVi
     public int getItemCount() {
         return fruits.size();
     }
-
-
 
     public void setmRecyclerViewClickListener(RecyclerViewClickListener mRecyclerViewClickListener) {
         this.mRecyclerViewClickListener = mRecyclerViewClickListener;
@@ -82,7 +79,7 @@ public class FruitListAdapter extends RecyclerView.Adapter<FruitListAdapter.MyVi
 
             image = (ImageView) itemView.findViewById(R.id.fruitImage);
             name = (TextView) itemView.findViewById(R.id.txViewName);
-            price = (TextView) itemView.findViewById(R.id.txViewPrice);
+            price = (TextView) itemView.findViewById(R.id.textViewUS);
 
             itemView.setOnClickListener(this);
         }

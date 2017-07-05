@@ -11,6 +11,7 @@ import com.muxi.lfernandosantos.desafiomuxi.views.RecyclerViewClickListener;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public  class ViewActions {
     public ImageLoader getImageLoader(Context context) {
 
         DisplayImageOptions displayImageOptions = new DisplayImageOptions.Builder()
+                .displayer( new RoundedBitmapDisplayer(130))
                 .showImageOnLoading(R.drawable.blankspinner)
                 .showImageForEmptyUri(R.mipmap.ic_launcher)
                 .cacheInMemory(true)

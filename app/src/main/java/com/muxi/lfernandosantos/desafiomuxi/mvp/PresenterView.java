@@ -1,7 +1,10 @@
 package com.muxi.lfernandosantos.desafiomuxi.mvp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -72,6 +75,7 @@ public class PresenterView implements MVP.ViewFruit{
     public void goFullScreenImage(Fruit fruit) {
 
     }
+
 
     @Override
     public ImageLoader getImageLoaderCache() {

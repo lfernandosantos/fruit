@@ -9,6 +9,7 @@ import android.content.Context;
 
 public class Converter {
 
+
     public String formatPrice(String price){
         return String.format("%.2f",Double.valueOf(price));
     }
@@ -18,4 +19,6 @@ public class Converter {
         Double dolarPrice = preco * 3.5;
         return String.format("%.2f",dolarPrice);
     }
+
+    //public native double converterToReal(double price);
 }

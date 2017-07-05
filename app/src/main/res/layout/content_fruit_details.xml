@@ -22,21 +22,30 @@
         android:id="@+id/textNameDetails" />
 
     <TextView
-        android:layout_margin="4dp"
         android:id="@+id/textPriceDolar"
         android:layout_width="wrap_content"
+        android:layout_below="@+id/textView2"
         android:layout_height="wrap_content"
-        android:text="$"
-        android:layout_below="@+id/textNameDetails"/>
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"/>
 
     <TextView
-        android:layout_margin="4dp"
-        android:layout_below="@+id/textNameDetails"
-        android:layout_toRightOf="@+id/textPriceDolar"
         android:id="@+id/textPriceReal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$" />
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_toRightOf="@+id/textPriceDolar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Price"
+        android:layout_below="@+id/textNameDetails"
+        android:layout_alignStart="@+id/textNameDetails" />
 
 
 </RelativeLayout>

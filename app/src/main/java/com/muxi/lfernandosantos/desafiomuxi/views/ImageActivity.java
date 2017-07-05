@@ -18,8 +18,6 @@ public class ImageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Fruit fruit = (Fruit) getIntent().getSerializableExtra("fruit");
         ImageView imageView = (ImageView) findViewById(R.id.imageFull);
