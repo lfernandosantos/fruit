@@ -29,31 +29,21 @@ public class PresenterView implements MVP.ViewFruit{
     public PresenterView(Context context){
         this.context = context;
     }
+
     @Override
     public LinearLayoutManager getLayoutManager() {
-        return null;
+        LinearLayoutManager llm = new LinearLayoutManager(context);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        return llm;
     }
 
-    @Override
-    public void pupulaCampos(Fruit fruit) {
-
-    }
-
-    @Override
-    public void findViews() {
-
-    }
 
     @Override
     public void showSnack(String s, View view) {
        ViewActions viewActions = new ViewActions();
         viewActions.showSnack(s, view, context);
     }
-
-    @Override
-    public void loadRecyclerView(DataFruit dataFruit) {
-
-    }
+    
 
     @Override
     public void showProgressDialog() {
@@ -71,19 +61,6 @@ public class PresenterView implements MVP.ViewFruit{
     }
 
 
-    @Override
-    public void goFullScreenImage(Fruit fruit) {
-
-    }
-
-
-    @Override
-    public ImageLoader getImageLoaderCache() {
-
-        ViewActions viewActions = new ViewActions();
-        return viewActions.getImageLoader(context);
-
-    }
 
     @Override
     public void setFruitAdapter(List<Fruit> fruitList, RecyclerView recyclerView) {

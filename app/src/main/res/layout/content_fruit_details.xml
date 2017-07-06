@@ -22,6 +22,7 @@
         android:id="@+id/textNameDetails" />
 
     <TextView
+        android:textSize="16sp"
         android:id="@+id/textPriceDolar"
         android:layout_width="wrap_content"
         android:layout_below="@+id/textView2"
@@ -30,6 +31,7 @@
         android:layout_marginRight="4dp"/>
 
     <TextView
+        android:textSize="16sp"
         android:id="@+id/textPriceReal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +42,7 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"

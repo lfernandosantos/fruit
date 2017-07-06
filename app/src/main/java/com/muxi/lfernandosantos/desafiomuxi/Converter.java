@@ -9,16 +9,22 @@ import android.content.Context;
 
 public class Converter {
 
+    static {
+        System.loadLibrary("converterJNI");
+    }
 
     public String formatPrice(String price){
         return String.format("%.2f",Double.valueOf(price));
     }
 
     public String getPriceReal(String us) {
-        Double preco  = Double.valueOf(us);
-        Double dolarPrice = preco * 3.5;
-        return String.format("%.2f",dolarPrice);
+
+        double priceUSD  =  Double.parseDouble(us);
+
+        double priceReal = converterToReal(priceUSD);
+
+        return String.format("%.2f",priceReal);
     }
 
-    //public native double converterToReal(double price);
+    public native double converterToReal(double price);
 }

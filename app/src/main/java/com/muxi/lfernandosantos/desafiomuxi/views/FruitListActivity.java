@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.muxi.lfernandosantos.desafiomuxi.mvp.MVP;
 import com.muxi.lfernandosantos.desafiomuxi.mvp.Presenter;
 import com.muxi.lfernandosantos.desafiomuxi.mvp.PresenterView;
 import com.muxi.lfernandosantos.desafiomuxi.R;
@@ -18,6 +19,7 @@ import com.muxi.lfernandosantos.desafiomuxi.models.DataFruit;
 import com.muxi.lfernandosantos.desafiomuxi.models.Fruit;
 import com.muxi.lfernandosantos.desafiomuxi.network.IFuitsService;
 import com.muxi.lfernandosantos.desafiomuxi.network.RequestFruit;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,10 +43,10 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
         setContentView(R.layout.activity_fruit_list);
 
         findViews();
-
-        recyclerViewFruits.setLayoutManager(getLayoutManager());
         presenterView = new PresenterView(this);
         presenter = new Presenter(this);
+
+        recyclerViewFruits.setLayoutManager(presenterView.getLayoutManager());
 
     }
 
@@ -69,7 +71,6 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
         RequestFruit requestFruit = new RequestFruit();
 
         IFuitsService request = requestFruit.getRetrofitBuild();
-
         Call<DataFruit> requestList = request.listCall();
 
         requestList.enqueue(new Callback<DataFruit>() {
@@ -87,14 +88,6 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
                 presenterView.showSnack("Verifique sua conexão.", recyclerViewFruits);
             }
         });
-
-    }
-
-    @NonNull
-    private LinearLayoutManager getLayoutManager() {
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        return llm;
     }
 
     private void findViews() {
@@ -106,6 +99,7 @@ public class FruitListActivity extends AppCompatActivity implements RecyclerView
         fruits = dataFruit.getFruits();
         presenterView.setFruitAdapter(fruits, recyclerViewFruits);
     }
+
 
     @Override
     public void onClick(View view, int position){

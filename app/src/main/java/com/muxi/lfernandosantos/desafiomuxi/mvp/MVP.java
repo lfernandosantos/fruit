@@ -20,14 +20,9 @@ public interface MVP {
 
     interface ViewFruit{
         public LinearLayoutManager getLayoutManager();
-        public void pupulaCampos(Fruit fruit);
-        public void findViews();
         public void showSnack(String s, View view);
-        public void loadRecyclerView(DataFruit dataFruit);
         public void showProgressDialog();
         public void dismissProgressDialog();
-        public void goFullScreenImage(Fruit fruit);
-        public ImageLoader getImageLoaderCache();
         public void setFruitAdapter(List<Fruit> fruitList, RecyclerView recyclerView);
 
     }
