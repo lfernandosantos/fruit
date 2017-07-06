@@ -1,12 +1,12 @@
-Frameorks utilizados
+Frameworks utilizados
 	•	Retrofit (http://square.github.io/retrofit/)
-	⁃	Comunicação com API
+		⁃ Comunicação com API
 
 	•	Universal Image Loader (https://github.com/nostra13/Android-Universal-Image-Loader)
-	⁃	Cache das imagens
+		⁃ Cache das imagens
 
 	•	Glide (https://github.com/bumptech/glide)
-	⁃	Carregar imagens de uma URL
+		⁃ Carregar imagens de uma URL
 
 
 O aplicativo consiste em exibir uma lista de frutas com seus respectivos preços em dólar. Sendo possível ver mais detalhes, como valor em real e foto em full screen da fruta selecionada ao clicar na imagem. O valor em real  é convertido utilizando código nativo (C).
